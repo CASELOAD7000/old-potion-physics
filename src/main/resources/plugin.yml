@@ -1,0 +1,5 @@
+name: OldPotionPhysics
+version: '1.0'
+main: me.caseload.oldpotionphysics.OldPotionPhysics
+api-version: '1.21'
+authors: [ Caseload ]
