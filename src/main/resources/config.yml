@@ -1,0 +1,3 @@
+enabled: true
+enable_message: "&aSuccessfully enabled old potion physics."
+disable_message: "&cSuccessfully disabled old potion physics."

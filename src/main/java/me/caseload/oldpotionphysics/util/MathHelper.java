@@ -5,9 +5,7 @@ import java.util.Random;
 public class MathHelper {
 
     private static final float[] SINE_TABLE = new float[65536];
-    private static final double[] ARCSINE_TABLE = new double[257];
-    private static final double[] COSINE_OF_ARCSINE_TABLE = new double[257];
-    private static final double ROUNDER_256THS = Double.longBitsToDouble(4805340802404319232L);
+    private static final Random random = new Random();
 
     static {
         for (int i = 0; i < SINE_TABLE.length; i++) {
@@ -16,7 +14,6 @@ public class MathHelper {
     }
 
     public static double nextTriangular(double mode, double deviation) {
-        Random random = new Random();
         return mode + deviation * (random.nextDouble() - random.nextDouble());
     }
 
