@@ -2,4 +2,7 @@ name: OldPotionPhysics
 version: '1.1'
 main: me.caseload.oldpotionphysics.OldPotionPhysics
 api-version: '1.21'
+folia-supported: true
 authors: [ Caseload ]
+libraries:
+  - dev.jorel:commandapi-paper-shade:11.0.0

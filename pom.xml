@@ -22,7 +22,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.13.0</version>
+                <version>3.14.1</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
@@ -31,7 +31,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.5.3</version>
+                <version>3.6.1</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -42,11 +42,13 @@
                 </executions>
                 <configuration>
                     <minimizeJar>true</minimizeJar>
+                    <createDependencyReducedPom>false</createDependencyReducedPom>
+                    <artifactSet>
+                        <excludes>
+                            <exclude>dev.jorel:commandapi-*</exclude>
+                        </excludes>
+                    </artifactSet>
                     <relocations>
-                        <relocation>
-                            <pattern>dev.jorel.commandapi</pattern>
-                            <shadedPattern>me.caseload.oldpotionphysics.commandapi</shadedPattern>
-                        </relocation>
                     </relocations>
                 </configuration>
             </plugin>
@@ -75,8 +77,9 @@
         </dependency>
         <dependency>
             <groupId>dev.jorel</groupId>
-            <artifactId>commandapi-bukkit-shade</artifactId>
-            <version>9.5.3</version>
+            <artifactId>commandapi-paper-shade</artifactId>
+            <version>11.0.0</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>

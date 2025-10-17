@@ -1,7 +1,7 @@
 package me.caseload.oldpotionphysics;
 
 import dev.jorel.commandapi.CommandAPI;
-import dev.jorel.commandapi.CommandAPIBukkitConfig;
+import dev.jorel.commandapi.CommandAPIPaperConfig;
 import me.caseload.oldpotionphysics.command.MainCommand;
 import me.caseload.oldpotionphysics.listener.ProjectileLaunchListener;
 import org.bukkit.event.Listener;
@@ -11,7 +11,7 @@ public final class OldPotionPhysics extends JavaPlugin implements Listener {
 
     @Override
     public void onLoad() {
-        CommandAPI.onLoad(new CommandAPIBukkitConfig(this));
+        CommandAPI.onLoad(new CommandAPIPaperConfig(this));
     }
 
     @Override

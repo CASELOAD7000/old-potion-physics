@@ -23,6 +23,6 @@ public class PhysicsHelper {
         Vector shooterVelocity = shooter.getVelocity().clone();
         shooterVelocity.setY(shooter.isOnGround() ? 0.0 : shooterVelocity.getY());
 
-        return getVelocity((double) f, (double) g, (double) h, speed, divergence).add(shooterVelocity);
+        return getVelocity(f, g, h, speed, divergence).add(shooterVelocity);
     }
 }
